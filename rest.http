@@ -26,3 +26,30 @@ Content-Type: application/json
     "email":"g@gmail.com",
     "password":"as"
 }
+
+###
+POST {{rootURL}}/api/v1/product/register
+Content-Type: application/json
+
+{
+    "name":"kabi",
+    "description":"rb",
+    "price":"1234567890",
+    "category":"677f1e52cb44c16880c1a089",
+    "stock":"12",
+    "image":"image.jpg",
+    "user": "677f15a8b4e46015121533b6"
+
+}
+
+###
+POST {{rootURL}}/api/v1/category/register
+Content-Type: application/json
+
+{
+    "name":
+"Living",
+"description":
+"Furniture and decor for living rooms, including sofas, chairs, and tab…"
+
+}

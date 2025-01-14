@@ -62,8 +62,8 @@ export const getUser = async (req, res, next) => {
       const isPasswordCorrect = comparePassword(password, user.password);
 
       if (isPasswordCorrect) {
-        const JWT_TOOKEN = Sign_Access_JWT({ email: email });
-        user.password = undefined;
+        const JWT_TOKEN = Sign_Access_JWT({ email: email });
+        user.password = password;
 
         //user authenticated
         if (email && password) {
@@ -71,7 +71,7 @@ export const getUser = async (req, res, next) => {
             status: "success",
             message: "login success",
             user,
-            JWT_TOOKEN,
+            JWT_TOKEN,
           });
         }
         return;
